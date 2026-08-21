@@ -40,11 +40,11 @@ curl -X 'POST' \
   -H 'X-API-Key: SECRET_KEY_BURAYA' \
   -H 'Content-Type: multipart/form-data' \
   -F 'file=@test_image.jpg'
+```
+### 2. Geçmiş Analizleri Getirme (GET /history)
+* **Veritabanındaki analiz loglarını listeler.
 
-2. Geçmiş Analizleri Getirme (GET /history)
-Veritabanındaki analiz loglarını listeler.
-
-Header: X-API-Key: <YOUR_API_KEY>
+* **Header: X-API-Key: <YOUR_API_KEY>
 
 Rate Limit: 30 istek / dakika  
 
@@ -53,7 +53,7 @@ Rate Limit: 30 istek / dakika
 ### 1. Backend Kurulumu (FastAPI)
 ```bash
 # Repoyu klonlayın
-git clone [https://github.com/recepdoruk58/dentascan-backend.git](https://github.com/recepdoruk58/dentascan-backend.git)
+git clone https://github.com/recepdoruk58/dentascan-backend.git
 cd dentascan-backend
 
 # Sanal ortamı başlatın
@@ -68,4 +68,5 @@ echo 'API_KEY="SECRET_KEY_BURAYA"' > .env
 
 # Sunucuyu ayağa kaldırın
 uvicorn main:app --host 0.0.0.0 --port 8000
+```
 
