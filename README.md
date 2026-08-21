@@ -29,14 +29,14 @@ FastAPI yerleşik olarak Swagger UI sağlar. Sunucu çalışırken `http://127.0
 
 ### 1. Yeni Analiz Oluşturma (`POST /predict_caries`)
 Görüntüyü alır, analiz eder ve sonucu döner.
-* **Header:** `X-API-Key: <YOUR_API_KEY>`
-* **Body:** `multipart/form-data` (file: image)
-* **Rate Limit:** 5 istek / dakika
+* Header:** `X-API-Key: <YOUR_API_KEY>`
+* Body:** `multipart/form-data` (file: image)
+* Rate Limit:** 5 istek / dakika
 
 **Örnek cURL İsteği:**
 ```bash
 curl -X 'POST' \
-  '[http://127.0.0.1:8000/predict_caries](http://127.0.0.1:8000/predict_caries)' \
+  'http://127.0.0.1:8000/predict_caries' \
   -H 'X-API-Key: SECRET_KEY_BURAYA' \
   -H 'Content-Type: multipart/form-data' \
   -F 'file=@test_image.jpg'
