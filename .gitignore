@@ -1,0 +1,7 @@
+__pycache__/
+.env
+test_request.py
+test.py
+runs/
+uploads/
+history.db
